@@ -1,31 +1,19 @@
 import './App.css';
+import Navbar from './components/navbar';
+import Cardhome from './components/cardhome';
+import Intro from './components/intro';
+import Footer from './components/footer';
+import Infocard from './components/infocard';
 
 function App() {
   return (
-    <div>
-      <header>
-        <div className='caja-logos'>
-          <div>
-            <img src="https://img.icons8.com/windows/32/000000/google-web-search.png" alt=''/>
-          </div>
-          <div className='logo-nav'>
-            Phone Store
-          </div>
-          <div className='logo-carrito'>
-            <img src="https://img.icons8.com/ios/30/000000/buy--v1.png" alt=''/>
-          </div>
-        </div>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>IPhone</li>
-            <li>Samsung</li>
-            <li>Otros</li>
-            <li>Contactos</li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <Cardhome/>
+      <Intro/>
+      <Infocard/>
+      <Footer/>
+    </>
   );
 }
 
