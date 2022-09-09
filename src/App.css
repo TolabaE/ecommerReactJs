@@ -52,15 +52,19 @@ h4{
   color: rgb(172, 172, 168);
 }
 .card-box{
-  border:2px solid black;
   border-radius: 12px;
   margin: auto;
   margin-bottom: 20px;
 }
 .bg-color{
   border-radius: 15px;
-  margin: 20px;
+  margin:25px;
+  padding: 10px;
   background-color: rgb(179, 178, 178);
+}
+.bg-color:hover{
+  transition:all 1s;
+  transform: scale(1.1);
 }
 .card-body{
   text-align: center;
