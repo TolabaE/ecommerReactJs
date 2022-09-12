@@ -28,7 +28,7 @@
   color: rgb(125, 125, 125);
 }
 .conteiner-footer{
-  padding: 50px 30px;
+  padding: 50px 30px 5px 30px;
   text-align: center;
   color: white;
 }
@@ -62,14 +62,48 @@ h4{
   padding: 10px;
   background-color: rgb(179, 178, 178);
 }
-.bg-color:hover{
-  transition:all 1s;
-  transform: scale(1.1);
-}
 .card-body{
   text-align: center;
 }
 .card-title{
   font-weight:700 ;
   font-size: 40px;
+}
+.conteiner-products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  padding: 0px 10px;
+}
+.conteiner-phone{
+  background-color: rgb(216, 216, 216);
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px 5px;
+}
+.imgCard{
+  border-radius: 15px;
+}
+.box-img{
+  border-radius: 15px;
+  width: 10rem;
+  height: 12rem;
+}
+.box-button{
+  display: flex;
+  justify-content: center;
+  padding: 2px 6px;
+  border-radius:20px;
+  border: 1px solid black;
+  text-align: center;
+}
+button{
+  padding: 1px 12px;
+  font-size: x-large;
+}
+.box-cantidad{
+  padding: 10px;
+  font-size:large;
+  font-weight: 700;
 }
