@@ -17,10 +17,10 @@ const Card = ({marca,modelo,precio,imagen}) => {
     return (
         <>
             <div className='conteiner-phone'>
-                <div className='conteiner-picture'>
+                <div>
                     <img src={imagen} alt="descrition picture" className='box-img' />
                 </div>
-                <div>
+                <div className='container-detall-card'>
                     <h3>{marca}</h3>
                     <h5>{modelo}</h5>
                     <p>USD {precio}</p>

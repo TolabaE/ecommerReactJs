@@ -4,7 +4,7 @@ import Cardhome from './components/cardhome';
 import Intro from './components/intro';
 import Footer from './components/footer';
 import Infocard from './components/infocard';
-import Products from './conteiner/products';
+import Products from './container/products';
 
 function App() {
   return (
