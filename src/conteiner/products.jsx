@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../components/card';
 
 const Products = () => {
+    
     return (
         <>
             <div className='conteiner-products'>

@@ -5,7 +5,7 @@ const Card = ({marca,modelo,precio,imagen}) => {
 
     const [number, setstate] = useState(1);
     const addNumber=()=>{
-        if (number<10) {
+        if (number<5) {
             setstate(number+1);
         }
     }
