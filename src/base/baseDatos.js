@@ -47,6 +47,13 @@ const baseDatos = [
         description:"128 GB",
         precie:700,
         image:"https://antyweb.pl/img/375/480/fit/wp-content/uploads/2022/07/ej1xwbodmw/iphone-14.jpeg"
+    },
+    {
+        id:8,
+        name:"Samsung Galaxy",
+        description:"A 51 color negro 128 GB",
+        precie:730,
+        image:"https://www.corning.com/content/dam/corning/microsites/csm/gorillaglass/Samsung/CGG_Samsung_galaxy_a51.jpg"
     }
 ]
 export default baseDatos;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cardhome = () => {
+const Carrusel = () => {
     return (
         <>
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
@@ -14,4 +14,4 @@ const Cardhome = () => {
     );
 }
 
-export default Cardhome;
+export default Carrusel;

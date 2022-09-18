@@ -1,19 +1,16 @@
 import './App.css';
-import Navbar from './components/navbar';
-import Cardhome from './components/cardhome';
-import Intro from './components/intro';
+import Navbar from './components/Navbar';
 import Footer from './components/footer';
-import Infocard from './components/infocard';
-import Products from './container/products';
+import Products from './container/Products';
+import ItemDetailContainer from './container/ItemDetailContainer';
+
 
 function App() {
   return (
     <>
       <Navbar/>
-      <Cardhome/>
-      <Intro/>
-      <Products/>
-      <Infocard/>
+      <ItemDetailContainer/> 
+      {/* <Products/> */}
       <Footer/>
     </>
   );

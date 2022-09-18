@@ -1,8 +1,8 @@
 import { useState,useEffect } from 'react';
 import React from 'react';
-import Card from '../components/card';
+import Card from '../components/Card';
 import simulandoPromesa from '../utils/Promesa';
-import baseDatos from '../base/baseDatos'
+import baseDatos from '../base/baseDatos';
 
 const Products = () => {
 
