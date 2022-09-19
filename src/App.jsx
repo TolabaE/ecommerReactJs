@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Products from './container/Products';
 import ItemDetailContainer from './container/ItemDetailContainer';
