@@ -8,11 +8,13 @@ const Navbar =()=>{
                 </div>
                 <div className="container-list-father">
                     <ul className="container-list-children">
-                        <li>Home</li>
-                        <li>Iphone</li>
-                        <li>Samsung</li>
+                        <li>
+                            <a href="/">Inicio</a>
+                        </li>
+                        <li><a href="/product">Iphone</a></li>
+                        <li><a href="/detail">Detalle</a></li>
                         <li>Otros</li>
-                        <li>Contactos</li>
+                        <li><a href="/contact">Contacto</a></li>
                     </ul>
                 </div>
                 <div className="container-carrito">

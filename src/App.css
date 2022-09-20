@@ -28,9 +28,8 @@ div ul li{
   padding-top: 20px;
   padding-left: 10px;
 }
-.bag
-/* estilos del card inicio */
-.caja-intro{
+/* estilos de componente intro */
+.box-intro{
   padding: 20px;
   text-align: center;
 }
@@ -154,4 +153,28 @@ button{
   padding: 10px;
   font-size:large;
   font-weight: 700;
+}
+/* estilos del formulario de contacto */
+.container-form-father{
+  display: flex;
+  justify-content: center;
+}
+.container-form{
+  background-color: darkgrey;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 20px;
+}
+.box-title-form{
+  text-align: center;
+}
+.title-form{
+  font-weight: 700;
+}
+input{
+  padding: 10px 40px;
+  border-radius: 12px;
+  border: 1px solid black;
+  margin: 5px;
 }

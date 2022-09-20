@@ -50,10 +50,46 @@ const baseDatos = [
     },
     {
         id:8,
-        name:"Samsung Galaxy",
-        description:"A 51 color negro 128 GB",
+        name:"Samsung Galaxy A51",
+        description:" color negro 128 GB",
         precie:730,
         image:"https://www.corning.com/content/dam/corning/microsites/csm/gorillaglass/Samsung/CGG_Samsung_galaxy_a51.jpg"
-    }
+    },
+    // {
+    //     id:9,
+    //     name:"Samsung Galaxy A03",
+    //     precie:277,
+    //     image:""
+    // },
+    // {
+    //     id:10,
+    //     name:"Samsung Galaxy A03",
+    //     precie:277,
+    //     image:""
+    // },
+    // {
+    //     id:11,
+    //     name:"Samsung Galaxy A03",
+    //     precie:277,
+    //     image:""
+    // },
+    // {
+    //     id:12,
+    //     name:"Samsung Galaxy A03",
+    //     precie:277,
+    //     image:""
+    // },
+    // {
+    //     id:13,
+    //     name:"Samsung Galaxy A03",
+    //     precie:277,
+    //     image:""
+    // },
+    // {
+    //     id:14,
+    //     name:"Samsung Galaxy A03",
+    //     precie:277,
+    //     image:""
+    // },
 ]
 export default baseDatos;
