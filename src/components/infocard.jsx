@@ -8,7 +8,7 @@ const Infocard = () => {
                     <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title">FORMAS DE PAGO</h5>
-                            <p className="card-text">El pago se abona al precio dolar o en pesos al tipo de cambio libre/blue. Recibimos tu usado en parte de pago,valorado en precio dolar del momento.</p>
+                            <p className="card-text">Tenes hasta 6 cuotas sin interes pagando con VISA debito o Master Card y si abonas en efectivo tenes un descuento del 10%.</p>
                         </div>
                     </div>
                     <div className="col-md-4">

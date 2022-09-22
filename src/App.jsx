@@ -1,18 +1,25 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Products from './container/Products';
 import ItemDetailContainer from './container/ItemDetailContainer';
+import HomeContainer from './container/HomeContainer';
+import Contacto from './pages/Contacto';
 
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar/>
-      <ItemDetailContainer/> 
-      {/* <Products/> */}
+        <Routes>
+          <Route path='/' element={<HomeContainer/>}/>
+          <Route path='/category/:id' element={<Products/>}/>
+          <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/contacto' element={<Contacto/>}/>
+        </Routes>
       <Footer/>
-    </>
+    </BrowserRouter>
   );
 }
 
