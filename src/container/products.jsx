@@ -3,7 +3,7 @@ import React from 'react';
 import Card from '../components/Card';
 import simulandoPromesa from '../utils/Promesa';
 import baseDatos from '../base/baseDatos';
-import { NavLink, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Products = () => {
 
@@ -34,7 +34,8 @@ const Products = () => {
                     key={elemento.id}
                     imagen={elemento.image}
                     marca={elemento.name}
-                    detalle={<NavLink to={`/detalle/${elemento.id}`}>Ver mas</NavLink>}
+                    modelo={elemento.precie}
+                    detalle={<Link className="card-link" to={`/detalle/${elemento.id}`}>Comprar</Link>}
                     //el navlink recibe como paramtro el id del producto y al hacer click,lo lleva al detalle del producto que alla seleccionado.
                 />
                 ))

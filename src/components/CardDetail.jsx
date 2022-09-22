@@ -22,20 +22,19 @@ const CardDetail = ({imagen,marca,detalle,precio,stock}) => {
             <div className='container-children-detail'>
                 <h2>{marca}</h2>
                 <h3>{detalle}</h3>
-                <p>stock:{stock} u/disponibles</p>
-                <p>USD {precio}</p>
-                <p>cantidad</p>
+                <p>stock:{stock} unidades</p>
+                <p className='text-precie'>$ {precio}</p>
+                <p>+ Consulte la garantia de su dispositivo </p>
+                <p>+ Los telefonos incluye cargador y cable</p>
+                <p>+ Tomamos tu usado como parte de pago</p>
                 <div className='box-button-father'>
+                    <p>Cantidad</p>
                     <div className='box-button'>
                         <button onClick={addNumber}>+</button>
                         <div className='box-cantidad'>{number}</div>
                         <button onClick={reduceNumber}>-</button>
                     </div>
-                    
                 </div>
-                <p>+ Consulte la garantia de su dispositivo </p>
-                <p>+ Los telefonos incluye cargador y cable</p>
-                <p>+ Tomamos tu usado como parte de pago</p>
                 <div>
                     <button className='btn btn-danger'>Agregar al carrito</button>
                 </div>
