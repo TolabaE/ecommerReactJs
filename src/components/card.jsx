@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 
 const Card = ({marca,modelo,imagen,detalle}) => {
@@ -12,7 +11,7 @@ const Card = ({marca,modelo,imagen,detalle}) => {
                 </div>
                 <div className='container-detall-card'>
                     <h3>{marca}</h3>
-                    <h5>{modelo}</h5>
+                    <h5 className='title-five'>$ {modelo}</h5>
                     <p className='parraf-card-link'>{detalle}</p>
                 </div>
             </div>

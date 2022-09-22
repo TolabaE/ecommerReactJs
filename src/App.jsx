@@ -6,6 +6,7 @@ import Products from './container/Products';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import HomeContainer from './container/HomeContainer';
 import Contacto from './pages/Contacto';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path='/category/:id' element={<Products/>}/>
           <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
           <Route path='/contacto' element={<Contacto/>}/>
+          <Route path='/carrito' element={<Cart/>}/>
         </Routes>
       <Footer/>
     </BrowserRouter>

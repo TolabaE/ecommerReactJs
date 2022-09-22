@@ -5,7 +5,7 @@ const baseDatos = [
         name:"Iphone 7",
         description:"Plus 128 GB blanco",
         quantity:10,
-        precie: 240,
+        precie: 109000,
         image:"https://http2.mlstatic.com/D_NQ_NP_702021-MLA43703742665_102020-O.jpg" 
     },
     {
@@ -14,7 +14,7 @@ const baseDatos = [
         name:"Iphone 8",
         description:"64 GB rosa",
         quantity:15,
-        precie: 250,
+        precie: 144999,
         image:"https://http2.mlstatic.com/D_NQ_NP_770422-MLA50638694136_072022-V.jpg" 
     },
     {
@@ -23,7 +23,7 @@ const baseDatos = [
         name:"Iphone X",
         description:"Plus 128 GB gris",
         quantity:8,
-        precie: 320,
+        precie: 229000,
         image:"https://i.pinimg.com/originals/42/98/74/4298741daed485a38b400f2ef69098f5.jpg"
     },
     {
@@ -32,7 +32,7 @@ const baseDatos = [
         name:"Iphone 11 Pro",
         description:"128 GB negro",
         quantity:8,
-        precie:450,
+        precie:231999,
         image:"https://falabella.scene7.com/is/image/Falabella/14673166_3?wid=800&hei=800&qlt=70"
     },
     {
@@ -41,7 +41,7 @@ const baseDatos = [
         name:"Iphone 12 pro",
         description:"128 GB",
         quantity:12,
-        precie:500,
+        precie:439990,
         image:"https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/iphone_12_pro_iphone_12_iphone_11_battery_life.jpg"
     },
     {
@@ -50,7 +50,7 @@ const baseDatos = [
         name:"Iphone 13",
         description:"128GB color azul",
         quantity:18,
-        precie:327000,
+        precie:549990,
         image:"https://http2.mlstatic.com/D_NQ_NP_2X_619667-MLA47781882790_102021-F.webp"
     },
     {
@@ -59,7 +59,7 @@ const baseDatos = [
         name:"Iphone 13 pro",
         description:"128 GB ",
         quantity:5,
-        precie:550,
+        precie:620990,
         image:"https://www.apple.com/newsroom/images/product/iphone/geo/Apple_HowToBuy_iPhone-13-Pro_GEO_09162021_carousel.jpg.large.jpg"
     },
     {
@@ -77,7 +77,7 @@ const baseDatos = [
         name:"Apple iPad 9",
         description:"64 ram color gris",
         quantity:6,
-        precie:85599,
+        precie:185599,
         image:"https://http2.mlstatic.com/D_NQ_NP_2X_711191-MLA47871333065_102021-F.webp",
     },
     {
@@ -86,7 +86,7 @@ const baseDatos = [
         name:"Samsung Galaxy A51",
         description:" color negro 128 GB",
         quantity:15,
-        precie:730,
+        precie:105954,
         image:"https://www.corning.com/content/dam/corning/microsites/csm/gorillaglass/Samsung/CGG_Samsung_galaxy_a51.jpg"
     },
     {
@@ -95,7 +95,7 @@ const baseDatos = [
         name:"Samsung Galaxy A03",
         description:"color negro 64 GB",
         quantity:18,
-        precie:277,
+        precie:40290,
         image:"https://images.fravega.com/f300/727bb4eab2ce4c20131bde63bab71b34.jpg.webp"
     },
     {
@@ -104,7 +104,7 @@ const baseDatos = [
         name:"Samsung Galaxy A23",
         description:"color celeste 64 GB 4ram con funda protectora",
         quantity:10,
-        precie:463,
+        precie:67201,
         image:"https://m.media-amazon.com/images/I/71mReSZh9TL._AC_SS450_.jpg"
     },
     {
@@ -113,7 +113,7 @@ const baseDatos = [
         name:"Samsung Galaxy S21",
         description:"FE 5G color oliva, 128 GB ",
         quantity:13,
-        precie:1030,
+        precie:149497,
         image:"https://images.fravega.com/f500/9aaf9888e9e0cdb0cd6b21165f859f16.jpg"
     },
     {
@@ -122,7 +122,7 @@ const baseDatos = [
         name:"Galaxy Zfold4",
         description:"Phantom Black 256 GB",
         quantity:8,
-        precie:2620,
+        precie:380274,
         image:"https://shop.jtglobal.com/wp-content/uploads/2021/08/samsung-galaxy-z-fold3-phantom-black-433x423.jpg"
     },
     {
@@ -197,5 +197,14 @@ const baseDatos = [
         precie:249800,
         image:"https://http2.mlstatic.com/D_NQ_NP_2X_772446-MLA46163631945_052021-F.webp"
     },
+    {
+        category:5,
+        id:23,
+        name:"Huawei Mate 30 Pro",
+        description:"256GB purpura cosmico 8GB ram",
+        quantity:12,
+        precie:498999,
+        image:"https://http2.mlstatic.com/D_NQ_NP_2X_611173-MLA42072676350_062020-F.webp"
+    }
 ]
 export default baseDatos;

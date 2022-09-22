@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { BsCart3 } from "react-icons/bs";
 const Navbar =()=>{
     return(
         <>
@@ -26,7 +27,7 @@ const Navbar =()=>{
                     </ul>
                 </div>
                 <div className="container-carrito">
-                    <img className="bag" src="https://img.icons8.com/ios/40/000000/shopping-bag--v1.png" alt="carrito"/>
+                    <Link to="/carrito"><BsCart3 className="icons"></BsCart3></Link>
                 </div>
             </nav>
         </>
