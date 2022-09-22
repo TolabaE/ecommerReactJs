@@ -1,6 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const Card = ({marca,modelo,precio,imagen}) => {
+
+const Card = ({marca,modelo,imagen,detalle}) => {
 
     return (
         <>
@@ -11,7 +13,7 @@ const Card = ({marca,modelo,precio,imagen}) => {
                 <div className='container-detall-card'>
                     <h3>{marca}</h3>
                     <h5>{modelo}</h5>
-                    <p>USD {precio}</p>
+                    <p className='parraf-card-link'>{detalle}</p>
                 </div>
             </div>
         </>

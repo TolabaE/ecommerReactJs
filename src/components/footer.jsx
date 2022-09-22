@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <>
-            <div className='conteiner-footer bg-dark'>
+            <footer className='conteiner-footer'>
                 <div>
                     <h3 id='titleFooter'>Estamos ubicados en Caballito</h3>
                     <p>Retiralo o coordina un envio</p>
@@ -29,8 +29,8 @@ const Footer = () => {
                         <p>Podes comunicarte y reservar un turno al Whatsapp(+54 11 93499-39858) en horarios de atencion al cliente</p>
                     </div>
                 </div>
-                <p>@CEO eduardo 2022,www.PhoneStore.com.ar</p>
-            </div>
+                <p>@CEO Eduardo.T 2022,www.PhoneStore.com.ar</p>
+            </footer>
         </>
     );
 }

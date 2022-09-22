@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Products from './container/Products';
 import ItemDetailContainer from './container/ItemDetailContainer';
@@ -14,9 +14,9 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path='/' element={<HomeContainer/>}/>
-          <Route path='/product' element={<Products/>}/>
-          <Route path='/detail' element={<ItemDetailContainer/>}/>
-          <Route path='/contact' element={<Contacto/>}/>
+          <Route path='/category/:id' element={<Products/>}/>
+          <Route path='/detalle/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/contacto' element={<Contacto/>}/>
         </Routes>
       <Footer/>
     </BrowserRouter>

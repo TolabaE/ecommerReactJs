@@ -1,20 +1,28 @@
-
+import { Link } from "react-router-dom";
 const Navbar =()=>{
     return(
         <>
-            <nav className="container-navbar bg-dark">
+            <nav className="container-navbar">
                 <div className="box-logo">
-                    Phone Store
+                    <Link className="link-nab-log" to="/">Phone Store</Link>
                 </div>
                 <div className="container-list-father">
                     <ul className="container-list-children">
                         <li>
-                            <a href="/">Inicio</a>
+                            <Link className="link-nab" to="/">Inicio</Link>
                         </li>
-                        <li><a href="/product">Iphone</a></li>
-                        <li><a href="/detail">Detalle</a></li>
-                        <li>Otros</li>
-                        <li><a href="/contact">Contacto</a></li>
+                        <li>
+                            <Link className="link-nab" to="/category/10">Iphone</Link>
+                        </li>
+                        <li>
+                            <Link className="link-nab" to="/category/15">Samsung</Link>
+                        </li>
+                        <li>
+                            <Link className="link-nab" to="/category/5">Otros</Link>
+                        </li>
+                        <li>
+                            <Link className="link-nab" to="/contacto">Contacto</Link>
+                        </li> 
                     </ul>
                 </div>
                 <div className="container-carrito">

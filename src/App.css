@@ -1,180 +1,238 @@
-/* estilos del navbar */
-.container-navbar{
-  display: flex;
-  flex-wrap: wrap;
-  color: white;
-  text-transform: uppercase;
-  align-items: baseline;
+@media (min-width:320px){
+
+  /* estilos del navbar */
+  .container-navbar{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-transform: uppercase;
+    align-items: baseline;
+  }
+  .box-logo{
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: x-large;
+    padding-left: 15px;
+  }
+  .link-nab-log{
+    text-decoration: none;
+    color: white;
+  }
+  .link-nab-log:hover{
+    color:black;
+  }
+  .container-list-father{
+    margin-top: 10px;
+  }
+  .container-list-children{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+  }
+  div ul li{
+    padding: 10px 10px;
+  }
+  .container-carrito{
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  .link-nab{
+    padding: 10px 15px;
+    border-radius:5px;
+    color:aliceblue;
+    text-decoration: none;
+  }
+  .link-nab:hover{
+    background-color: aliceblue;
+    border: 1px solid black;
+    padding: 10px 14px;
+    color: black;
+  }
+  /* estilos de componente intro */
+  .box-intro{
+    padding: 20px;
+    text-align: center;
+  }
+  .titulo{
+    font-weight: 700;
+    font-size: x-large;
+    color: black;
+  }
+  .text{
+    color: rgb(125, 125, 125);
+  }
+  /* estilos del footer */
+  .conteiner-footer{
+    padding: 50px 30px 5px 30px;
+    text-align: center;
+    color: white;
+  }
+  #titleFooter{
+    font-weight: 700;
+    font-size:xx-large;
+  }
+  h4{
+    font-weight: 600;
+    color: white;
+  }
+  .footer-father{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .box-children{
+    padding: 10px;
+    width: 300px;
+    color: rgb(238, 238, 237);
+  }
+  .card-box{
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .bg-color{
+    border-radius: 15px;
+    margin:25px;
+    padding: 10px;
+    background-color: rgb(179, 178, 178);
+  }
+  .card-body{
+    text-align: center;
+  }
+  .card-title{
+    font-weight:700 ;
+    font-size: 40px;
+  }
+  .conteiner-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    padding: 0px 10px;
+  }
+  /* estilo del card de productos */
+  .conteiner-phone{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 10px 5px;
+    width:160px;
+  }
+  .conteiner-phone:hover{
+    background-color:#ade8f4;
+  }
+  .imgCard{
+    border-radius: 15px;
+  }
+  .box-img{
+    width:100%;
+    border-radius: 15px;
+  }
+  .box-img:hover{
+    transition: all 1s;
+    transform: scale(1.1);
+  }
+  .parraf-card-link{
+    text-align: center;
+  }
+  /*Todos los estilo de la CardDetail estan aqui */
+  .container-detall-card{
+    padding-top: 10px;
+  }
+  .container-detail{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:lightgray;
+    border-radius: 15px;
+    margin: 20px;
+  }
+  .container-picture-detail{
+    width: 350px;
+    
+  }
+  .box-img-detailcard{
+    width: 100%;
+  }
+  .container-children-detail{
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  .box-button-father{
+    display: inline-block;
+    margin:0px 0px 15px 10px;
+  }
+  .box-button{
+    display: flex;
+    justify-content: center;
+    padding: 6px 30px;
+    border-radius:20px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  button{
+    padding: 1px 12px;
+    font-size: x-large;
+    background-color:lightgray ;
+  }
+  .box-cantidad{
+    padding: 10px;
+    font-size:large;
+    font-weight: 700;
+  }
+  /* estilos del formulario de contacto */
+  .container-form-father{
+    display: flex;
+    justify-content: center;
+  }
+  .container-form{
+    background-color:#ced4da;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+  }
+  .box-title-form{
+    text-align: center;
+  }
+  .title-form{
+    font-weight: 700;
+  }
+  input{
+    padding: 10px 40px;
+    border-radius: 12px;
+    border: 1px solid black;
+    margin: 5px;
+  }
 }
-.box-logo{
-  margin-top: 25px;
-  font-weight: 700;
-  font-size: x-large;
-  padding-left: 15px;
-}
-.container-list-father{
-  margin-top: 10px;
-}
-.container-list-children{
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 15px 10px;
-}
-div ul li{
-  padding-left: 50px;
-}
-.container-carrito{
-  padding-top: 20px;
-  padding-left: 10px;
-}
-/* estilos de componente intro */
-.box-intro{
-  padding: 20px;
-  text-align: center;
-}
-.titulo{
-  font-weight: 700;
-  font-size: x-large;
-  color: black;
-}
-.text{
-  color: rgb(125, 125, 125);
-}
-.conteiner-footer{
-  padding: 50px 30px 5px 30px;
-  text-align: center;
-  color: white;
-}
-#titleFooter{
-  font-weight: 700;
-  font-size:xx-large;
-}
-h4{
-  font-weight: 600;
-  color: white;
-}
-.footer-father{
-  display: flex;
-  flex-direction:row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.box-children{
-  padding: 10px;
-  width: 300px;
-  color: rgb(172, 172, 168);
-}
-.card-box{
-  border-radius: 12px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.bg-color{
-  border-radius: 15px;
-  margin:25px;
-  padding: 10px;
-  background-color: rgb(179, 178, 178);
-}
-.card-body{
-  text-align: center;
-}
-.card-title{
-  font-weight:700 ;
-  font-size: 40px;
-}
-.conteiner-products{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly; 
-  padding: 0px 10px;
-}
-.conteiner-phone{
-  padding: 20px;
-  border-radius: 15px;
-  border: 1px solid black;
-  margin: 10px 5px;
-  width:250px;
-}
-.conteiner-phone:hover{
-  background-color: rgb(216, 216, 216);
-}
-.imgCard{
-  border-radius: 15px;
-}
-.box-img{
-  width:100%;
-  border-radius: 15px;
-}
-.box-img:hover{
-  transition: all 1s;
-  transform: scale(1.1);
-}
-.container-detall-card{
-  padding-top: 10px;
-}
-/*Todos los estilo de la CardDetail estan aqui */
-.container-detail{
-  display: flex;
-  flex-wrap: wrap;
-  background-color:lightgray;
-  border-radius: 15px;
-  margin: 20px;
-}
-.container-picture-detail{
-  width: 350px;
-  
-}
-.box-img-detailcard{
-  width: 100%;
-}
-.container-children-detail{
-  padding-left: 20px;
-  padding-top: 10px;
-}
-.box-button-father{
-  display: inline-block;
-  margin:0px 0px 15px 10px;
-}
-.box-button{
-  display: flex;
-  justify-content: center;
-  padding: 6px 30px;
-  border-radius:20px;
-  border: 1px solid black;
-  text-align: center;
-}
-button{
-  padding: 1px 12px;
-  font-size: x-large;
-  background-color:lightgray ;
-}
-.box-cantidad{
-  padding: 10px;
-  font-size:large;
-  font-weight: 700;
-}
-/* estilos del formulario de contacto */
-.container-form-father{
-  display: flex;
-  justify-content: center;
-}
-.container-form{
-  background-color: darkgrey;
-  border-radius: 15px;
-  border: 2px solid black;
-  padding: 50px;
-  margin: 20px;
-}
-.box-title-form{
-  text-align: center;
-}
-.title-form{
-  font-weight: 700;
-}
-input{
-  padding: 10px 40px;
-  border-radius: 12px;
-  border: 1px solid black;
-  margin: 5px;
+@media (min-width:768px){
+  /* estilos del navbar */
+  .container-navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container-list-children{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+  div ul li{
+    padding: 5px 15px;
+  }
+  .container-form{
+    text-align: left;
+    padding: 60px 80px;
+    margin: 15px 0px;
+  }
+  input{
+    padding:10px 60px;
+  }
+  .conteiner-phone{
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px 5px;
+    width: 250px;
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-const CardDetail = ({imagen,marca,detalle,precio}) => {
+const CardDetail = ({imagen,marca,detalle,precio,stock}) => {
 
     const [number, setstate] = useState(1);
     const addNumber=()=>{
@@ -22,6 +22,7 @@ const CardDetail = ({imagen,marca,detalle,precio}) => {
             <div className='container-children-detail'>
                 <h2>{marca}</h2>
                 <h3>{detalle}</h3>
+                <p>stock:{stock} u/disponibles</p>
                 <p>USD {precio}</p>
                 <p>cantidad</p>
                 <div className='box-button-father'>
@@ -32,10 +33,9 @@ const CardDetail = ({imagen,marca,detalle,precio}) => {
                     </div>
                     
                 </div>
-                <p>+ Garantia de 3 Meses</p>
+                <p>+ Consulte la garantia de su dispositivo </p>
                 <p>+ Los telefonos incluye cargador y cable</p>
                 <p>+ Tomamos tu usado como parte de pago</p>
-                <p>+ Consultar valor de su telefono</p>
                 <div>
                     <button className='btn btn-danger'>Agregar al carrito</button>
                 </div>
