@@ -1,18 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ItemCount from './ItemCount';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 const CardDetail = ({imagen,marca,detalle,precio,stock}) => {
+    
+    //la funcion addCart viene con un parametro(number),a ese parametro le pasamos como un estado de setvariable y permite cambiarlo
+    const addCart=(number)=>{
 
-    const [number, setstate] = useState(1);
-    const addNumber=()=>{
-        if (number<5) {
-            setstate(number+1);
-        }
+        setvariable(number)
+
+        Swal.fire(
+            'Listo',
+            'Producto agregado al carrito',
+            'success'
+        )
     }
-    const reduceNumber=()=>{
-        if (number>1) {
-            setstate(number-1);
-        }
-    }
+    const [variable, setvariable] = useState(0);
 
     return (
         <div className='container-detail'>
@@ -27,17 +31,14 @@ const CardDetail = ({imagen,marca,detalle,precio,stock}) => {
                 <p>+ Consulte la garantia de su dispositivo </p>
                 <p>+ Los telefonos incluye cargador y cable</p>
                 <p>+ Tomamos tu usado como parte de pago</p>
-                <div className='box-button-father'>
-                    <p>Cantidad</p>
-                    <div className='box-button'>
-                        <button onClick={addNumber}>+</button>
-                        <div className='box-cantidad'>{number}</div>
-                        <button onClick={reduceNumber}>-</button>
-                    </div>
-                </div>
-                <div>
-                    <button className='btn btn-danger'>Agregar al carrito</button>
-                </div>
+                {
+                    variable===0
+                    ? <ItemCount
+                    stock={stock}
+                    addCart={addCart} //paso como parametro una funcion que se ejecuta, en CardDetail.
+                    />
+                    :<Link to="/carrito">Ver carrito</Link>
+                }
             </div>
         </div>
     );
