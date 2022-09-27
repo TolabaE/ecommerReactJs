@@ -1,22 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import Swal from 'sweetalert2';
-const CardDetail = ({imagen,marca,detalle,precio,stock}) => {
-    
-    //la funcion addCart viene con un parametro(number),a ese parametro le pasamos como un estado de setvariable y permite cambiarlo
-    const addCart=(number)=>{
+import { CartContext } from './CartContext';
 
-        setvariable(number)
+const CardDetail = ({imagen,marca,detalle,precio,stock,objeto}) => {
+    
+    const [variable, setvariable] = useState(0);
+    const {agregarProducto}=useContext(CartContext);
+
+    //la funcion addCart viene con un parametro(number),a ese parametro le pasamos como un estado de setvariable y permite cambiarlo
+    const addCart=(cantidad)=>{
+
+        setvariable(cantidad)
 
         Swal.fire(
             'Listo',
             'Producto agregado al carrito',
             'success'
         )
+        agregarProducto(objeto, cantidad) //paso como parametro la prop. objeto, y me trae a todo el producto.
     }
-    const [variable, setvariable] = useState(0);
 
     return (
         <div className='container-detail'>
@@ -32,10 +37,11 @@ const CardDetail = ({imagen,marca,detalle,precio,stock}) => {
                 <p>+ Los telefonos incluye cargador y cable</p>
                 <p>+ Tomamos tu usado como parte de pago</p>
                 {
+                    //si variable es igual a 0 me muestre el boton de agregar productos.
                     variable===0
                     ? <ItemCount
                     stock={stock}
-                    addCart={addCart} //paso como parametro una funcion que se ejecuta, en CardDetail.
+                    addCart={addCart} //paso como otra prop una funcion que se ejecuta,en ItemCount.
                     />
                     :<Link to="/carrito">Ver carrito</Link>
                 }

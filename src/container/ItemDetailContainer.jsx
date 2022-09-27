@@ -33,6 +33,7 @@ const ItemDetailContainer = () => {
                     stock={elemen.quantity}
                     detalle={elemen.description}
                     precio={elemen.precie}
+                    objeto={elemen}
                     />
                 ))
             }

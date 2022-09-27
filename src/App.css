@@ -38,16 +38,17 @@
     padding-left: 10px;
   }
   .link-nab{
-    padding: 10px 15px;
-    border-radius:5px;
+    padding:12px 15px;
+    border-radius:3px;
     color:aliceblue;
     text-decoration: none;
   }
   .link-nab:hover{
-    background-color: aliceblue;
-    border: 1px solid black;
-    padding: 10px 14px;
+    /* background-color: black; */
+    padding: 10px 13px;
     color: black;
+    border: 2px solid black;
+    font-weight: 600;
   }
   .icons{
     color: white;
@@ -157,10 +158,10 @@
     color: black;
     font-weight: 600;
   }
-  /*Todos los estilo de la CardDetail estan aqui */
   .container-detall-card{
     padding-top: 10px;
   }
+  /*Todos los estilo de la CardDetail estan aqui */
   .container-detail{
     display: flex;
     flex-wrap: wrap;
@@ -169,8 +170,7 @@
     margin: 20px;
   }
   .container-picture-detail{
-    width: 350px;
-    
+    width: 400px;
   }
   .box-img-detailcard{
     width: 100%;
@@ -195,7 +195,7 @@
     border: 1px solid black;
     text-align: center;
   }
-  button{
+  .button-Count{
     padding: 1px 12px;
     font-size: x-large;
     background-color:lightgray ;
@@ -216,6 +216,10 @@
     border: 2px solid black;
     padding: 20px;
     margin: 10px;
+    transition: all 1s;
+  }
+  .container-form:hover{
+    background-color: #4fb4ea;
   }
   .box-title-form{
     text-align: center;
@@ -228,6 +232,13 @@
     border-radius: 12px;
     border: 1px solid black;
     margin: 5px;
+  }
+  /* estilos de carrito  */
+  .img-cart{
+    width: 100px;
+  }
+  .button-delete{
+    background-color: rgb(154, 28, 28);
   }
 }
 @media (min-width:768px){
@@ -259,5 +270,9 @@
     border-radius: 15px;
     margin: 10px 5px;
     width: 250px;
+  }
+  .container-detail-cart{
+    display: flex;
+    justify-content: space-around;
   }
 }

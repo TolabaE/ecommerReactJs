@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Card = ({marca,modelo,imagen,detalle}) => {
 
     return (
