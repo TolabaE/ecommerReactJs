@@ -8,9 +8,10 @@ const Cart = () => {
 
     if(carrito.length===0){
         return(
-            <>
-            <p>carrito vacio</p>
-            </>
+            <div className='container-cart-vacio'>
+                <h1 className='title-cart-vacio'>No tenes productos agregados al carrito</h1>
+                <img className='picture-cart-vacio' src="https://paisajesespanoles.es/images/emptycart.png" alt="un carrito vacio" />
+            </div>
         )
     }
 

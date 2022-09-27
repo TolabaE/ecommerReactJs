@@ -43,9 +43,12 @@ const CartContextProvider = ({children}) => {
     const sumaTotal=()=>{
         return carrito.reduce((inicial,item) => inicial + item.cantidad * item.precie,0);
     }
+    const sumaCantidad=()=>{
+        return carrito.reduce((start,prod)=> start + prod.cantidad,0);
+    }
     
     return (
-        <CartContext.Provider value={{carrito,agregarProducto,clearAll,removeItem,sumaTotal}}> 
+        <CartContext.Provider value={{carrito,agregarProducto,clearAll,removeItem,sumaTotal,sumaCantidad}}> 
             {children}
         </CartContext.Provider>
     );

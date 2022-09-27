@@ -1,6 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
+import { CartContext } from "./CartContext";
+import { useContext } from "react";
+
 const Navbar =()=>{
+
+    const {sumaCantidad}= useContext(CartContext);
+
     return(
         <>
             <nav className="container-navbar">
@@ -27,7 +33,8 @@ const Navbar =()=>{
                     </ul>
                 </div>
                 <div className="container-carrito">
-                    <Link to="/carrito"><BsCart3 className="icons"></BsCart3></Link>
+                    <Link to="/carrito"><BsCart3 className="icons"/></Link>
+                    <p hidden={sumaCantidad()===0} className="icono-cart-cantidad">{sumaCantidad()}</p>
                 </div>
             </nav>
         </>
