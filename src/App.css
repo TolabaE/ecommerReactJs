@@ -259,6 +259,16 @@
     color: darkgray;
     padding: 10px;
   }
+  .ring{
+    display: flex;
+    justify-content: center;
+    margin: 15%;
+  }
+  .ring-product{
+    display: flex;
+    justify-content: center;
+    margin:15% ;
+  }
 }
 @media (min-width:768px){
   /* estilos del navbar */
@@ -296,5 +306,11 @@
   }
   .picture-cart-vacio{
     width: 800px;
+  }
+  .ring{
+    margin: 18%;
+  }
+  .ring-product{
+    margin: 16%;
   }
 }
