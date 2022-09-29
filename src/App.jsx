@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import Products from './container/Products';
+import Products from './container/products';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import HomeContainer from './container/HomeContainer';
 import Contacto from './pages/Contacto';
