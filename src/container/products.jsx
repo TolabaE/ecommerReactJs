@@ -1,35 +1,42 @@
 import { useState,useEffect} from 'react';
 import React from 'react';
 import Card from '../components/Card';
-import simulandoPromesa from '../utils/Promesa';
-import baseDatos from '../base/baseDatos';
 import { NavLink, useParams } from 'react-router-dom';
 import { Ring } from '@uiball/loaders';
+import { collection, getDocs,query,where} from "firebase/firestore";
+import { db } from '../utils/firebaseConfig';
 
 const Products = () => {
 
     const [datos, setdatos] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const { id } = useParams();//es un parametro que viene con react-router-dom.
+    const {idCategory} = useParams();
 
     useEffect(() => {
-        //si no me envian un ID con el numero de categoria,traigo todos los productos de la base de datos.
-        //sino me trae los productos que cumplan con esa categoria.
-        if (id) {
-            //llamo a la promesa y le agrego el array de productos traidos de una base de datos,usando el metodo .find()
-            simulandoPromesa(baseDatos.filter(prod=>prod.category==id))
-            .then (resolve=>{
-                setdatos(resolve)
+        
+        const  firestoreFetch = async ()=>{
+
+            let q
+            if (idCategory) {
+                q = query(collection(db, "products"),where('category','==',parseInt(idCategory)))
+            }
+            
+            const querySnapshot = await getDocs(q)
+            const dataFromFirestore = querySnapshot.docs.map((document) => ({
+                //id:document.id,
+                ...document.data()
+            }));
+            return dataFromFirestore;
+        }
+        
+        firestoreFetch()
+            .then(result=>{
+                setdatos(result)
                 setLoading(false)
             })
-            .catch (error=>console.log(error))
-        }else{
-            simulandoPromesa(baseDatos)
-            .then (resolve=>setdatos(resolve))
-            .catch (error=>console.log(error))
-        }
-    }, [id]);
+    }, [idCategory]);
+    
     return (
         <div className='conteiner-products'>
             {
