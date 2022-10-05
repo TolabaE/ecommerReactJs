@@ -1,10 +1,12 @@
 import React from 'react';
 import { CartContext } from './CartContext';
 import { useContext } from 'react';
+import CartDetail from './CartDetail'
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
-    const {carrito,clearAll,removeItem,sumaTotal} = useContext(CartContext);
+    const {carrito,clearAll,sumaTotal} = useContext(CartContext);
 
     if(carrito.length===0){
         return(
@@ -18,46 +20,50 @@ const Cart = () => {
     return (
         <>
             <h2>Carrito de Compras</h2>
-            <button className='btn-primary' onClick={clearAll}>Vaciar Carrito</button>
-            <table className="table">
-            <thead>
-                <tr>
-                <th scope="col">producto</th>
-                <th scope="col">nombre</th>
-                <th scope="col">detalle</th>
-                <th scope="col">cantidad</th>
-                <th scope="col">total</th>
-                </tr>
-            </thead>
-            {
-                carrito.map(item=>(        
-                    <tbody key={item.id}>
-                        <tr>
-                            <td><img className='img-cart' src={item.image} alt="" /></td>
-                            <td>{item.name} </td>
-                            <td>{item.description}</td>
-                            <th scope="row">{item.cantidad}</th>
-                            <td>$ {item.cantidad*item.precie}</td>
-                            <div>
-                                <button className='btn btn-danger' onClick={()=>{removeItem(item.id)}}>eliminar</button>
-                            </div>
-                        </tr>
-                    </tbody>
-                ))
-            }
-            </table>
-            <div className='container-detail-cart'>
+            <button className='btn-primary btn-vaciar-cart' onClick={clearAll}>Vaciar Carrito</button>
+            <div className='container-cart-detail'>
                 <div>
-                    <div>
-                        <h5>Entrega</h5>
-                        <p>Los envios se realiza de lunes a viernes en horario de 10 a 18 hs</p>
-                    </div>
-                    seguir comprando
+                    <h5>producto</h5>
                 </div>
                 <div>
-                    <p>subtotal</p>
-                    <p>precio total ${sumaTotal()} </p>
-                    <div>Finalizar Compra</div>
+                    <h5>nombre</h5>
+                </div>
+                <div>
+                    <h5>detalle</h5>
+                </div>
+                <div>
+                    <h5>cantidad</h5>
+                </div>
+                <div>
+                    <h5>total</h5>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            {
+                carrito.map(item =>(        
+                    <CartDetail
+                    key={item.id}
+                    img={item.image}
+                    nombre={item.name}
+                    detalle={item.description}
+                    cantidad={item.cantidad}
+                    total={item.cantidad*item.precie}
+                    eliminar={item.id}
+                    />
+                ))
+            }
+            <div className='caja-factura-cart'>
+                <div className='caja-envio'>
+                    <h5>Entrega</h5>
+                    <p>Los envios son de lunes a viernes de 10 a 18 hs.</p>
+                    <Link className='link-volver' to="/category/10">Seguir Comprando</Link>
+                </div>
+                <div className='caja-comprar-dos'>
+                    <p>subtotal: ${sumaTotal()}</p>
+                    <p>precio total: ${sumaTotal()} </p>
+                    <button className='div-checkout btn bg-primary'>Finalizar Compra</button>
                 </div>
             </div>
         </>
