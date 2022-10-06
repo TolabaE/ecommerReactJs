@@ -3,8 +3,9 @@ import React from 'react';
 import CardDetail from '../components/CardDetail';
 import { useParams } from 'react-router-dom';
 import { Ring } from '@uiball/loaders';
-import { collection, getDocs,query,where} from "firebase/firestore";
+import {doc, getDoc } from "firebase/firestore";
 import { db } from '../utils/firebaseConfig';
+
 
 const ItemDetailContainer = () => {
 
@@ -15,25 +16,24 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         
-        const  firestoreFetch = async ()=>{
+        const firestoreDetail =async()=>{
 
-            let q
-            if (idItem) {
-                q = query(collection(db, "products"),where('id','==',parseInt(idItem)))
-            }
+            //Trae un producto de la base de datos según el idItem que recibe como parametro.Al objeto lo devuelve con el id integrado.
+            const docRef = doc(db, "products", idItem);
+            const docSnap = await getDoc(docRef);
             
-            const querySnapshot = await getDocs(q)
-            const dataFromFirestore = querySnapshot.docs.map((document) => ({
-                ...document.data()
-            }));
-            return dataFromFirestore;
+            return {
+                id:idItem,
+                ...docSnap.data()
+            };
         }
+
+        firestoreDetail()
+        .then(result=>{
+            setdatos(result)
+            setLoading(false)
+        })
         
-        firestoreFetch()
-            .then(result=>{
-                setdatos(result)
-                setLoading(false)
-            })
     }, [idItem]);
 
     return (
@@ -44,18 +44,15 @@ const ItemDetailContainer = () => {
                 <div className='ring'>
                     <Ring size={70}/>
                 </div>
-                
-                : datos.map(elemen => (
-                    <CardDetail
-                    key={elemen.id}
-                    imagen={elemen.image}
-                    marca={elemen.name}
-                    stock={elemen.quantity}
-                    detalle={elemen.description}
-                    precio={elemen.precie}
-                    objeto={elemen}
-                    />
-                ))
+                : 
+                <CardDetail
+                imagen={datos.image}
+                marca={datos.name}
+                stock={datos.quantity}
+                detalle={datos.description}
+                precio={datos.precie}
+                objeto={datos}
+                />
             }
         </div>
         

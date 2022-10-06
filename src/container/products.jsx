@@ -24,7 +24,7 @@ const Products = () => {
             
             const querySnapshot = await getDocs(q)
             const dataFromFirestore = querySnapshot.docs.map((document) => ({
-                //id:document.id,
+                id:document.id,
                 ...document.data()
             }));
             return dataFromFirestore;

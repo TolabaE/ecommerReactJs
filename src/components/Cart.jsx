@@ -3,10 +3,58 @@ import { CartContext } from './CartContext';
 import { useContext } from 'react';
 import CartDetail from './CartDetail'
 import { Link } from 'react-router-dom';
+import { serverTimestamp,doc, setDoc, collection,updateDoc, increment } from 'firebase/firestore';
+import {db}  from '../utils/firebaseConfig';
+import Swal from 'sweetalert2';
 
 const Cart = () => {
 
     const {carrito,clearAll,sumaTotal} = useContext(CartContext);
+
+    //esta funcion se ejecuta al hacer click en finalizar compra.
+    const createOrder =async()=>{
+
+        let itemsForDB=carrito.map(item=>({
+            id:item.id,
+            precie:item.precie,
+            title:item.name,
+            quantity:item.cantidad,
+        }))
+        
+        let order ={
+            cliente:{
+                name:"Juan Perez",
+                email: "perezcosta@gail.com",
+                phone: 11309485820
+            },
+            date:serverTimestamp(),
+            items:itemsForDB,
+            total: sumaTotal(),
+        }
+        const newOrderRef =doc(collection(db, "orders"));//le genera un id en la base de datos,el collection hace que se ejecute en orden la funcion asincronica.
+        await setDoc(newOrderRef, order);// crea la orden en la base de datos
+
+        carrito.forEach( async (item) => {
+            //actualiza el stock de la base de datos en firestore.
+            const stockRef = doc(db, "products",item.id);
+            
+            await updateDoc(stockRef, {
+                quantity: increment(-item.cantidad)
+            });
+        });
+        
+
+        clearAll()
+
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '¡Listo! Gracias por la compra',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+    }
 
     if(carrito.length===0){
         return(
@@ -63,7 +111,7 @@ const Cart = () => {
                 <div className='caja-comprar-dos'>
                     <p>subtotal: ${sumaTotal()}</p>
                     <p>precio total: ${sumaTotal()} </p>
-                    <button className='div-checkout btn bg-primary'>Finalizar Compra</button>
+                    <button onClick={createOrder} className='div-checkout btn bg-primary'>Finalizar Compra</button>
                 </div>
             </div>
         </>
