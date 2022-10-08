@@ -6,15 +6,14 @@ import { Ring } from '@uiball/loaders';
 import { collection, getDocs,query,where} from "firebase/firestore";
 import { db } from '../utils/firebaseConfig';
 
-const Products = () => {
+const ItemListContainer = () => {
 
     const [datos, setdatos] = useState([]);
     const [loading, setLoading] = useState(true);
-
     const {idCategory} = useParams();
 
     useEffect(() => {
-        
+
         const  firestoreFetch = async ()=>{
 
             let q
@@ -35,6 +34,7 @@ const Products = () => {
                 setdatos(result)
                 setLoading(false)
             })
+            
     }, [idCategory]);
     
     return (
@@ -45,18 +45,18 @@ const Products = () => {
                 <Ring size={80}/>
             </div>
             : datos.map((elemento) => (
-            <Card
-                key={elemento.id}
-                imagen={elemento.image}
-                marca={elemento.name}
-                modelo={elemento.precie}
-                detalle={<NavLink className="card-link" to={`/detalle/${elemento.id}`}>Comprar</NavLink>}
-                //el navlink recibe como paramtro el id del producto y al hacer click,lo lleva al detalle del producto que alla seleccionado.
-            />
+                <Card
+                    key={elemento.id}
+                    imagen={elemento.image}
+                    marca={elemento.name}
+                    modelo={elemento.precie}
+                    detalle={<NavLink className="card-link" to={`/detalle/${elemento.id}`}>Comprar</NavLink>}
+                    //el navlink recibe como paramtro el id del producto y al hacer click,lo lleva al detalle del producto que alla seleccionado.
+                />
             ))
         }
         </div>
     );
 }
 
-export default Products;
+export default ItemListContainer;

@@ -7,20 +7,22 @@ import { CartContext } from './CartContext';
 
 const CardDetail = ({imagen,marca,detalle,precio,stock,objeto}) => {
     
-    const [variable, setvariable] = useState(0);
+    const [contador, setContador] = useState(0);
     const {agregarProducto}=useContext(CartContext);
 
     //la funcion addCart viene con un parametro(number),a ese parametro le pasamos como un estado de setvariable y permite cambiarlo
     const addCart=(cantidad)=>{
 
-        setvariable(cantidad)
+        setContador(cantidad)
 
         Swal.fire(
             'Listo',
             'Producto agregado al carrito',
             'success'
         )
-        agregarProducto(objeto, cantidad) //paso como parametro la prop. objeto, y me trae a todo el producto.
+
+        //paso a la funcion como prop. cantidad y objeto, y me trae a todo el producto agregado.
+        agregarProducto(objeto, cantidad) 
     }
 
     return (
@@ -37,8 +39,8 @@ const CardDetail = ({imagen,marca,detalle,precio,stock,objeto}) => {
                 <p>+ Los telefonos incluye cargador y cable</p>
                 <p>+ Tomamos tu usado como parte de pago</p>
                 {
-                    //si variable es igual a 0 me muestre el boton de agregar productos.
-                    variable===0
+                    //si contador es igual a 0 me muestre el boton de agregar productos.
+                    contador===0
                     ? <ItemCount
                     stock={stock}
                     addCart={addCart} //paso como otra prop una funcion que se ejecuta,en ItemCount.

@@ -31,7 +31,9 @@ const Cart = () => {
             items:itemsForDB,
             total: sumaTotal(),
         }
-        const newOrderRef =doc(collection(db, "orders"));//le genera un id en la base de datos,el collection hace que se ejecute en orden la funcion asincronica.
+
+        //le genera un id en la base de datos,el collection hace que se ejecute en orden la funcion asincronica.
+        const newOrderRef =doc(collection(db, "orders"));
         await setDoc(newOrderRef, order);// crea la orden en la base de datos
 
         carrito.forEach( async (item) => {
@@ -49,11 +51,10 @@ const Cart = () => {
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: '¡Listo! Gracias por la compra',
+            title: '¡Listo! Gracias por su compra',
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
         })
-
     }
 
     if(carrito.length===0){
@@ -67,7 +68,7 @@ const Cart = () => {
 
     return (
         <>
-            <h2>Carrito de Compras</h2>
+            <h2 className='titleCart'>Carrito de Compras</h2>
             <button className='btn-primary btn-vaciar-cart' onClick={clearAll}>Vaciar Carrito</button>
             <div className='container-cart-detail'>
                 <div>

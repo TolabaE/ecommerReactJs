@@ -10,12 +10,11 @@ const CartContextProvider = ({children}) => {
     //creo al carrito como un estado,arranca con un array vacio.
     const [carrito, setCarrito] = useState([]); 
 
-    //creo una funcion global de agregar productos al carrito.
     const agregarProducto=(item,cantidad)=>{
 
         item.cantidad= cantidad; //creo un nuevo propiedad del objeto item.
 
-        //si ya existe un producto en el array le aumenta la cantidad.sino agrega el item.
+        //si ya existe un producto en el array le aumenta la cantidad,sino agrega el item.
         if (isInCart(item.id)) {
             const indiceItem = carrito.findIndex(elem=>elem.id === item.id);
             carrito[indiceItem].cantidad = carrito[indiceItem].cantidad + cantidad; 
@@ -29,7 +28,7 @@ const CartContextProvider = ({children}) => {
     }
     
     const clearAll=()=>{
-        setCarrito([]);//elimina todos los productos del array
+        setCarrito([]);
     }
     
     const removeItem=(id)=>{ //elimina a un producto del array
@@ -38,11 +37,14 @@ const CartContextProvider = ({children}) => {
     }
 
     const isInCart=(id)=>{
-        return carrito.some(prod => prod.id === id); //me devuelve true o false si existe item en el carrito.
+        //me devuelve true o false si existe item en el carrito.
+        return carrito.some(prod => prod.id === id);
     }
+
     const sumaTotal=()=>{
         return carrito.reduce((inicial,item) => inicial + item.cantidad * item.precie,0);
     }
+
     const sumaCantidad=()=>{
         return carrito.reduce((start,prod)=> start + prod.cantidad,0);
     }
