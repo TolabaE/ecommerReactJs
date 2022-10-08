@@ -231,11 +231,14 @@
     margin: 5px;
   }
   /* estilos del componente Cart  */
+  .titleCart{
+    text-align: center;
+  }
   .button-delete{
     background-color: rgb(154, 28, 28);
   }
   .btn-vaciar-cart{
-    margin-left:10px;
+    margin-left:15px;
   }
   .container-cart-vacio{
     text-align: center;
