@@ -28,8 +28,8 @@ const Footer = () => {
                         <h4>RESERVA DE TURNOS</h4>
                         <p>Podes comunicarte y reservar un turno al Whatsapp(+54 11 93499-39858) en horarios de atencion al cliente</p>
                     </div>
-                </div>
-                <p>@CEO Eduardo.T 2022,www.PhoneStore.com.ar</p>
+                </div> 
+                <p>@copyright derechos reservados:Eduardo.T 2022,www.PhoneStore.com.ar</p>
             </footer>
         </>
     );

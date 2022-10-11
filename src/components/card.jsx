@@ -6,7 +6,7 @@ const Card = ({marca,modelo,imagen,detalle}) => {
         <>
             <div className='conteiner-phone'>
                 <div>
-                    <img src={imagen} alt="descrition picture" className='box-img' />
+                    <img src={imagen} alt="#" className='box-img' />
                 </div>
                 <div className='container-detall-card'>
                     <h3>{marca}</h3>

@@ -10,7 +10,7 @@ const CartDetail = ({img,nombre,detalle,cantidad,total,eliminar}) => {
         <div className='container-cart-detail'>
             <div>
                 <img className='img-cart' src={img} alt="foto de productos"/>
-            </div>
+            </div> 
             <div>
                 <p>{nombre}</p>
             </div>

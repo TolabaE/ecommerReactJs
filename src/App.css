@@ -238,7 +238,7 @@
     background-color: rgb(154, 28, 28);
   }
   .btn-vaciar-cart{
-    margin-left:15px;
+    margin-left: 5px;
   }
   .container-cart-vacio{
     text-align: center;
@@ -339,5 +339,8 @@
   .img-cart{
     width: 100px;
     height: 100px;
+  }
+  .btn-vaciar-cart{
+    margin-left:15px;
   }
 }

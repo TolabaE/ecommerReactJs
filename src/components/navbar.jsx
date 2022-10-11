@@ -38,7 +38,7 @@ const Navbar =()=>{
                         <Link to="/carrito"><BsCart3 className="icons"/></Link>
                         <p hidden={sumaCantidad()===0} className="icono-cart-cantidad">{sumaCantidad()}</p>
                     </div>
-                </div>
+                </div> 
             </div>
         </nav>
     );

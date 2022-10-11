@@ -63,7 +63,7 @@ const Cart = () => {
                 <h1 className='title-cart-vacio'>Tu carrito esta vacio</h1>
                 <img className='picture-cart-vacio' src="https://paisajesespanoles.es/images/emptycart.png" alt="un carrito vacio" />
             </div>
-        )
+        ) 
     }
 
     return (
