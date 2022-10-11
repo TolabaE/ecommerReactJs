@@ -1,6 +1,6 @@
 import { useState,useEffect} from 'react';
 import React from 'react';
-import Card from '../components/Card';
+import Card from '../components/card';
 import { NavLink, useParams } from 'react-router-dom';
 import { Ring } from '@uiball/loaders';
 import { collection, getDocs,query,where} from "firebase/firestore";
