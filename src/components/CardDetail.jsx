@@ -28,8 +28,8 @@ const CardDetail = ({imagen,marca,detalle,precio,stock,objeto}) => {
     return (
         <div className='container-detail'>
             <div className='container-picture-detail'>
-                <img className='box-img-detailcard' src={imagen} alt="description of imagen"/>
-            </div>
+                <img className='box-img-detailcard' src={imagen} alt="#"/>
+            </div> 
             <div className='container-children-detail'>
                 <h2>{marca}</h2>
                 <h3>{detalle}</h3>

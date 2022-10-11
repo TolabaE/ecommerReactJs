@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
     const [datos, setdatos] = useState([]);
     const [loading, setLoading] = useState(true);
-    //le doy un numero a la  variable ID.
+    //le doy un numero a la variable ID.
     const {idItem} = useParams();
 
     useEffect(() => {
