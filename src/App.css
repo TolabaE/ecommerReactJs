@@ -116,15 +116,16 @@
   }
   /* estilo del card de productos */
   .conteiner-phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:#ade8f4;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
     margin: 10px 5px;
     width:160px;
     text-align: center;
-  }
-  .conteiner-phone:hover{
-    background-color:#ade8f4;
   }
   .imgCard{
     border-radius: 15px;
@@ -136,6 +137,9 @@
   .box-img:hover{
     transition: all 1s;
     transform: scale(1.1);
+  }
+  .title-h3-card{
+    padding-top: 10px;
   }
   .parraf-card-link{
     text-align: center;
@@ -156,9 +160,7 @@
     color: black;
     font-weight: 600;
   }
-  .container-detall-card{
-    padding-top: 10px;
-  }
+  
   /*Todos los estilo de la CardDetail estan aqui */
   .container-detail{
     display: flex;
@@ -271,6 +273,7 @@
     width: 220px;
   }
   .link-volver{
+    font-weight: 700;
     background-color: black;
     text-decoration: none;
     color: beige;
@@ -285,6 +288,7 @@
   }
   .div-checkout{
     border-radius: 40px;
+    font-weight: 700;
   }
   /* estilos del componente CartDetail */
   .container-cart-detail{
@@ -318,10 +322,14 @@
     padding:10px 60px;
   }
   .conteiner-phone{
+    background-color: aliceblue;
     padding: 20px;
     border-radius: 15px;
     margin: 10px 5px;
     width: 250px;
+  }
+  .conteiner-phone:hover{
+    background-color:#ade8f4;
   }
   .picture-cart-vacio{
     width: 650px;

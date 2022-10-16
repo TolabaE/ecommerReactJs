@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Ecommer con ReactJs/Tienda de Telefonos.
+Es un sitio web que lo realize en mi curso de reactJs, donde podes comprar dispositivos de distintas marcas, te muestra categorias de teléfonos Iphone, Samsung y otros, agregas al carrito y simula tu compra al bajar el stock de dicho producto, ya que los datos de los productos son traidos de firestore (que simula ser una base de datos), asi se trabajaria en un proyecto real donde los datos nos vienen del back-end.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="./src/img/imgCategoria.png" alt="pantalla general de la seccion categoria">
 
-## Available Scripts
+<img src="./src/img/imgHome.png" alt="pantalla general de Inicio">
 
-In the project directory, you can run:
+## Comenzando 🚀
+Para obtener una copia funcional del proyecto debes tener instalado Node js, lo cual podes descargarlo de internet e instalarlo en tu computadora.
+Luego vas al repositorio del proyecto y haces click en "code" copias el link y en donde tenes tus trabajos creas una carpeta nueva (nombre que deseas), lo abris con git ejecutando los siguientes comandos.
 
-### `npm start`
+### Pre-requisitos 📋
+Recuerda tener instalado [Node.js](https://nodejs.org/es/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instalación 🔧
+Una vez abierto la terminal del git ejecutas el comando.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `git clone "link del repositorio copiado"`
 
-### `npm test`
+Una vez completado la clonación abri el archivo con tu editor de código favorito, recomiendo(Visual Studio Code).
+En tu editor debes instalar las dependencias del mismo, para eso vas abrir la terminal del VSC y ejecutas el siguiente comando.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```npm install```
 
-### `npm run build`
+Vas a tener que ser paciente ya que esto puede llevar unos minutos, mientras se instala te explico lo que hace este comando.Permite agregar todas las extensiones y archivos necesarios como los node_modules, que contiene archivos importante para la ejecucion del programa, los mismos no se suben a GitHub debido a la gran cantidad de memoria que ocupan.
+A continuacion ejecutas el siguiente comando.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```npm start```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Esto perimite que puedas visualizar el sitio web en tu navegador.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Previsualización del sitio.
+Si queres saber como se veria el sitio web en tu dispositivo, [click](https://ecommer-phone-store.netlify.app/) aquí.
+Esta subido a un host de netlify y podrás interactuar con ella.
+## Construido con 🛠️
+Este proyecto fue creado con:
+* HTML.
+* CSS.
+* JavaScript.
+* [Sweetalert2](https://sweetalert2.github.io/).
+* [Node.js](https://nodejs.org/es/) -version 16.15.1.
+* [Firebase](https://firebase.google.com/?hl=es)
+* [React](https://es.reactjs.org/).
+* [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/).
 
-### `npm run eject`
+## Autores ✒️
+Este proyecto fue realizado por:
+* [Eduardo Tolaba](https://www.linkedin.com/in/tolaba-eduardo-esequiel/).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Licencia 📄
+Este proyecto está bajo la Licencia (Eduardo Tolaba).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Expresiones de Gratitud 🎁
+Quiero agradecer a mi profesor de react por su gran capacidad de enseñanza y excelencia para impartir sus clases con la mejor actitud.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* [Alex Marin Mendez](https://www.linkedin.com/in/alexmarinmendez/).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Y a mi tutor que siempre estuvo presente resolviendo mis consultas.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Francisco pugh](https://www.linkedin.com/in/francisco-pugh/).

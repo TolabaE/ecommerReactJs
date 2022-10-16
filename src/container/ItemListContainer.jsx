@@ -14,6 +14,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
 
+        setLoading(true)
         const  firestoreFetch = async ()=>{
 
             let q
