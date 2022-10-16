@@ -1,12 +1,12 @@
 # Ecommer con ReactJs/Tienda de Telefonos.
-Es un sitio web que lo realize en mi curso de reactJs, donde podes comprar dispositivos de distintas marcas, te muestra categorias de teléfonos Iphone, Samsung y otros, agregas al carrito y simula tu compra al bajar el stock de dicho producto, ya que los datos de los productos son traidos de firestore (que simula ser una base de datos), asi se trabajaria en un proyecto real donde los datos nos vienen del back-end.
-
-<img src="./src/img/imgCategoria.png" alt="pantalla general de la seccion categoria">
+Es un sitio web que lo realize en mi curso de reactJs, donde podes comprar dispositivos de distintas marcas, te muestra categorias de teléfonos Iphone, Samsung y otros, agregas al carrito y simula tu compra al bajar el stock de dicho producto, ya que los datos son traidos de firestore (que simula ser una base de datos), asi se trabajaria en un proyecto real donde los datos nos vienen del back-end.
 
 <img src="./src/img/imgHome.png" alt="pantalla general de Inicio">
 
+<img src="./src/img/imgCatSamsung.png" alt="pantalla general de la seccion categoria">
+
 ## Comenzando 🚀
-Para obtener una copia funcional del proyecto debes tener instalado Node js, lo cual podes descargarlo de internet e instalarlo en tu computadora.
+Para obtener una copia funcional del proyecto debes tener Node js, lo cual podes descargarlo de internet e instalarlo en tu computadora.
 Luego vas al repositorio del proyecto y haces click en "code" copias el link y en donde tenes tus trabajos creas una carpeta nueva (nombre que deseas), lo abris con git ejecutando los siguientes comandos.
 
 ### Pre-requisitos 📋
@@ -15,7 +15,7 @@ Recuerda tener instalado [Node.js](https://nodejs.org/es/).
 ## Instalación 🔧
 Una vez abierto la terminal del git ejecutas el comando.
 
-### `git clone "link del repositorio copiado"`
+```git clone "link del repositorio copiado"```
 
 Una vez completado la clonación abri el archivo con tu editor de código favorito, recomiendo(Visual Studio Code).
 En tu editor debes instalar las dependencias del mismo, para eso vas abrir la terminal del VSC y ejecutas el siguiente comando.
@@ -31,7 +31,7 @@ Esto perimite que puedas visualizar el sitio web en tu navegador.
 
 ## Previsualización del sitio.
 Si queres saber como se veria el sitio web en tu dispositivo, [click](https://ecommer-phone-store.netlify.app/) aquí.
-Esta subido a un host de netlify y podrás interactuar con ella.
+Esta subido a netlify y podrás interactuar con ella.
 ## Construido con 🛠️
 Este proyecto fue creado con:
 * HTML.
@@ -57,4 +57,4 @@ Quiero agradecer a mi profesor de react por su gran capacidad de enseñanza y ex
 
 Y a mi tutor que siempre estuvo presente resolviendo mis consultas.
 
-* [Francisco pugh](https://www.linkedin.com/in/francisco-pugh/).
+* [Francisco Pugh](https://www.linkedin.com/in/francisco-pugh/).
