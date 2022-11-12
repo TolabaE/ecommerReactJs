@@ -3,8 +3,9 @@ import React from 'react';
 import Card from '../components/card';
 import { NavLink, useParams } from 'react-router-dom';
 import { Ring } from '@uiball/loaders';
-import { collection, getDocs,query,where} from "firebase/firestore";
-import { db } from '../utils/firebaseConfig';
+import simulatorPromises from '../utils/Promesa';
+import baseDatos from '../utils/baseDatos';
+
 
 const ItemListContainer = () => {
 
@@ -13,31 +14,17 @@ const ItemListContainer = () => {
     const {idCategory} = useParams();
 
     useEffect(() => {
-
-        setLoading(true)
-        const  firestoreFetch = async ()=>{
-
-            let q
-            if (idCategory) {
-                q = query(collection(db, "products"),where('category','==',parseInt(idCategory)))
-            }
-            
-            const querySnapshot = await getDocs(q)
-            const dataFromFirestore = querySnapshot.docs.map((document) => ({
-                id:document.id,
-                ...document.data()
-            }));
-            return dataFromFirestore;
-        }
         
-        firestoreFetch()
+        setLoading(true)
+        if (idCategory) {
+            //hago un filtrado de los datos de acuerdo a la categoria que me envian por parametro.
+            simulatorPromises(baseDatos.filter(items=>items.category ===parseInt(idCategory)))
             .then(result=>{
                 setdatos(result)
                 setLoading(false)
             })
-            
+        }
     }, [idCategory]);
-    
     return (
         <div className='conteiner-products'>
             {

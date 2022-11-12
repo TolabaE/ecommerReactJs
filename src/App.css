@@ -215,9 +215,6 @@
     border: 2px solid black;
     padding: 20px;
     margin: 10px;
-    transition: all 1s;
-  }
-  .container-form:hover{
     background-color: #4fb4ea;
   }
   .box-title-form{

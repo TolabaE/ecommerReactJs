@@ -3,37 +3,25 @@ import React from 'react';
 import CardDetail from '../components/CardDetail';
 import { useParams } from 'react-router-dom';
 import { Ring } from '@uiball/loaders';
-import {doc, getDoc } from "firebase/firestore";
-import { db } from '../utils/firebaseConfig';
-
+import simulatorPromises from '../utils/Promesa';
+import baseDatos from '../utils/baseDatos';
 
 const ItemDetailContainer = () => {
 
     const [datos, setdatos] = useState([]);
     const [loading, setLoading] = useState(true);
-    //le doy un numero a la variable ID.
-    const {idItem} = useParams();
+    const {idItem} = useParams();//le doy un numero a la variable ID.
 
     useEffect(() => {
         
-        const firestoreDetail =async()=>{
-
-            //Trae un producto de la base de datos según el idItem que recibe como parametro.Al objeto lo devuelve con el id integrado.
-            const docRef = doc(db, "products", idItem);
-            const docSnap = await getDoc(docRef);
-            
-            return {
-                id:idItem,
-                ...docSnap.data()
-            };
+        if (idItem) {
+            //con el metodo find me devuelve el producto que cumpla con el id que me envian por parametro
+            simulatorPromises(baseDatos.find(item=>item.id===parseInt(idItem)))
+            .then(result=>{
+                setdatos(result)
+                setLoading(false)
+            })
         }
-
-        firestoreDetail()
-        .then(result=>{
-            setdatos(result)
-            setLoading(false)
-        })
-        
     }, [idItem]);
 
     return (
