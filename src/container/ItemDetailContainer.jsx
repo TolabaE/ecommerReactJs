@@ -3,8 +3,8 @@ import React from 'react';
 import CardDetail from '../components/CardDetail';
 import { useParams } from 'react-router-dom';
 import { Ring } from '@uiball/loaders';
-import simulatorPromises from '../utils/Promesa';
-import baseDatos from '../utils/baseDatos';
+import { db } from '../utils/firebaseConfig';
+import {doc, getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
 
@@ -13,15 +13,21 @@ const ItemDetailContainer = () => {
     const {idItem} = useParams();//le doy un numero a la variable ID.
 
     useEffect(() => {
-        
-        if (idItem) {
-            //con el metodo find me devuelve el producto que cumpla con el id que me envian por parametro
-            simulatorPromises(baseDatos.find(item=>item.id===parseInt(idItem)))
-            .then(result=>{
-                setdatos(result)
-                setLoading(false)
-            })
+
+        const firestoreDetail =async()=>{
+            //Trae un producto de la base de datos según el idItem que recibe como parametro.Al objeto lo devuelve con el id integrado.
+            const docRef = doc(db, "products", idItem);
+            const docSnap = await getDoc(docRef);
+            return {
+                id:idItem,
+                ...docSnap.data()
+            };
         }
+        firestoreDetail()
+        .then(result=>{
+            setdatos(result);
+            setLoading(false);
+        })
     }, [idItem]);
 
     return (
