@@ -12,12 +12,12 @@ const Infocard = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <img src="https://www.65ymas.com/uploads/s1/31/00/99/los-tele-fonos-mo-viles-ma-s-innovadores-de-este-2020-samsung-galaxy-s20-y-s20.jpeg" className="img-fluid rounded-start imgCard" alt="..." />
+                        <img src="https://www.65ymas.com/uploads/s1/31/00/99/los-tele-fonos-mo-viles-ma-s-innovadores-de-este-2020-samsung-galaxy-s20-y-s20.jpeg" className="img-fluid rounded-start imgCard" alt="#" />
                     </div>
                 </div>
                 <div className="row g-0 bg-color">
                     <div className="col-md-4">
-                        <img src="https://i.blogs.es/d7d3cb/iphone-11-cargador-5w/840_560.jpg" className="img-fluid rounded-start imgCard" alt="..." />
+                        <img src="https://i.blogs.es/d7d3cb/iphone-11-cargador-5w/840_560.jpg" className="img-fluid rounded-start imgCard" alt="" />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
@@ -37,12 +37,12 @@ const Infocard = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <img src="https://comparaplano.com.br/wp-content/uploads/2019/10/iphone-11-1.jpg" className="img-fluid rounded-start imgCard" alt="..." />
+                        <img src="https://comparaplano.com.br/wp-content/uploads/2019/10/iphone-11-1.jpg" className="img-fluid rounded-start imgCard" alt="" />
                     </div>
                 </div>
                 <div className="row g-0 bg-color">
                     <div className="col-md-4">
-                        <img src="https://media.revistagq.com/photos/61f8f95f4332382a235bcac9/4:3/w_800,h_600,c_limit/iPhone-14.jpeg" className="img-fluid rounded-start imgCard" alt="..." />
+                        <img src="https://media.revistagq.com/photos/61f8f95f4332382a235bcac9/4:3/w_800,h_600,c_limit/iPhone-14.jpeg" className="img-fluid rounded-start imgCard" alt="" />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">

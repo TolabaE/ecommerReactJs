@@ -15,7 +15,6 @@ const ItemCount = ({stock,addCart}) => {
             setstate(number-1);
         }
     }
-    
     return (
         <>
             <div className='box-button-father'>

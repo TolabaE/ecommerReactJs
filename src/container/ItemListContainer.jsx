@@ -1,10 +1,10 @@
 import { useState,useEffect} from 'react';
 import React from 'react';
-import Card from '../components/Card';
+import Card from '../components/card';
 import { NavLink, useParams } from 'react-router-dom';
 import { Ring } from '@uiball/loaders';
-import { collection, getDocs,query,where} from "firebase/firestore";
 import { db } from '../utils/firebaseConfig';
+import { collection, getDocs,query,where} from "firebase/firestore";
 
 const ItemListContainer = () => {
 
@@ -13,14 +13,14 @@ const ItemListContainer = () => {
     const {idCategory} = useParams();
 
     useEffect(() => {
-
+        
+        setLoading(true)
         const  firestoreFetch = async ()=>{
 
             let q
             if (idCategory) {
                 q = query(collection(db, "products"),where('category','==',parseInt(idCategory)))
             }
-            
             const querySnapshot = await getDocs(q)
             const dataFromFirestore = querySnapshot.docs.map((document) => ({
                 id:document.id,
@@ -28,15 +28,12 @@ const ItemListContainer = () => {
             }));
             return dataFromFirestore;
         }
-        
         firestoreFetch()
-            .then(result=>{
-                setdatos(result)
-                setLoading(false)
-            })
-            
+        .then(result=>{
+            setdatos(result);
+            setLoading(false);
+        })
     }, [idCategory]);
-    
     return (
         <div className='conteiner-products'>
             {

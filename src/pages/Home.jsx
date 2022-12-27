@@ -1,14 +1,14 @@
 import React from 'react';
-import Infocard from '../components/infocard';
 import Carrusel from '../components/Carrusel';
+import Infocard from '../components/infocard';
 
-const HomeContainer = () => {
+const Home = () => {
     return (
-        <div>
+        <>
             <Carrusel/>
             <Infocard/>
-        </div>
+        </>
     );
 }
 
-export default HomeContainer;
+export default Home;

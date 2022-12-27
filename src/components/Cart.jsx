@@ -3,9 +3,9 @@ import { CartContext } from './CartContext';
 import { useContext } from 'react';
 import CartDetail from './CartDetail'
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { serverTimestamp,doc, setDoc, collection,updateDoc, increment } from 'firebase/firestore';
 import {db}  from '../utils/firebaseConfig';
-import Swal from 'sweetalert2';
 
 const Cart = () => {
 
@@ -45,25 +45,24 @@ const Cart = () => {
             });
         });
         
-
         clearAll()
 
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: '¡Listo! Gracias por su compra',
+            title: '¡Compra Finalizada!',
             showConfirmButton: false,
             timer: 2000
         })
     }
-
+    
     if(carrito.length===0){
         return(
             <div className='container-cart-vacio'>
                 <h1 className='title-cart-vacio'>Tu carrito esta vacio</h1>
                 <img className='picture-cart-vacio' src="https://paisajesespanoles.es/images/emptycart.png" alt="un carrito vacio" />
             </div>
-        )
+        ) 
     }
 
     return (
