@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
-import { useState,useContext } from 'react';
+import { useContext } from 'react';
 import Swal from 'sweetalert2';
 import { CartContext } from './CartContext';
 
 const CardDetail = ({imagen,marca,detalle,precio,stock,objeto}) => {
     
-    const [contador, setContador] = useState(0);
-    const {agregarProducto}=useContext(CartContext);
+    //llamo los valores del cartContext que quiero usar.
+    const {agregarProducto,carrito}=useContext(CartContext);
 
     //la funcion addCart viene con un parametro(number),a ese parametro le pasamos como un estado de setvariable y permite cambiarlo
     const addCart=(cantidad)=>{
-
-        setContador(cantidad)
-
+        
         Swal.fire(
             'Listo',
             'Producto agregado al carrito',
@@ -39,13 +37,14 @@ const CardDetail = ({imagen,marca,detalle,precio,stock,objeto}) => {
                 <p>+ Los telefonos incluye cargador y cable</p>
                 <p>+ Tomamos tu usado como parte de pago</p>
                 {
-                    //si contador es igual a 0 me muestre el boton de agregar productos.
-                    contador===0
-                    ? <ItemCount
-                    stock={stock}
-                    addCart={addCart} //paso como otra prop una funcion que se ejecuta,en ItemCount.
+                    //si en el carrito en nombre del producto ya esta agregado,me muestre ir al carrito 
+                    carrito.some(item=>item.name === marca)
+                    ?<h4><Link to="/carrito">Ver carrito</Link></h4>
+                    //de lo contrario que me permita agregar el producto.
+                    :<ItemCount
+                        stock={stock}
+                        addCart={addCart} //paso como otra prop una funcion que se ejecuta,en ItemCount.
                     />
-                    :<Link to="/carrito">Ver carrito</Link>
                 }
             </div>
         </div>
